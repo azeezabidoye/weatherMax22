@@ -18,7 +18,7 @@ formEl.addEventListener('submit', (e) => {
     e.preventDefault();
     const address = inputEl.value;
 
-    fetch(`http://localhost:2000/weather?address=${address}`).then(response => {
+    fetch(`/weather?address=${address}`).then(response => {
         response.json().then(data => {
             if(data.error) {
                 errorMsgEl.classList.remove('hidden');
